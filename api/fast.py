@@ -53,8 +53,8 @@ def predict(pickup_datetime, pickup_longitude, pickup_latitude,
 
     X_pred['pickup_datetime'] = formatted_pickup_datetime
 
-    pipeline = joblib.load(PATH_TO_LOCAL_MODEL)
-    # pipeline = download_model(rm=False)
+    # pipeline = joblib.load(PATH_TO_LOCAL_MODEL)
+    pipeline = download_model(rm=False)
 
     y_pred = pipeline.predict(X_pred)
 
